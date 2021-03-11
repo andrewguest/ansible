@@ -1,0 +1,22 @@
+---
+  - hosts: apt  # we're only running the following command(s) on the 'apt' hosts from the /etc/ansible/hosts file
+    become: true  # sudo
+    become_user: root  # become the 'root' user
+
+    tasks:  # The actions that will actually be performed on the remote host
+      - name: check for any available OS updates
+        apt:  # run 'apt' commands. There are other options like 'yum' for RHEL-based distros
+          name: '*'
+          state: latest
+          update_cache: yes
+          only_upgrade: yes
+        register: apt_update_status  # create a 'state' that can be checked later
+      
+      - name: Remove packages not needed anymore
+        apt:
+          autoremove: yes
+      
+      - name: Reboot when packages were updated
+        reboot:
+          post_reboot_delay: 60
+        when: apt_update_status.changed  # when the 'apt_update_status' state, that we created earlier, changes then run the 'Reboot when packages were updated' task

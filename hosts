@@ -1,0 +1,14 @@
+# This file should be placed in: /etc/ansible/hosts
+
+# hosts that use the 'apt' package manager
+[apt]
+pihole  # 192.168.1.10
+homeassistant # 192.168.1.11
+flightradar24 # 192.168.1.12
+openvpn # 192.168.1.14
+jellyfin # 192.168.1.13
+ripper # 192.168.1.15
+
+# hosts that use the 'pkg' package manager
+[pkg]
+truenas # 192.168.1.9
