@@ -5,9 +5,10 @@
 pihole  # 192.168.1.10
 homeassistant # 192.168.1.11
 flightradar24 # 192.168.1.12
-openvpn # 192.168.1.14
 jellyfin # 192.168.1.13
+openvpn # 192.168.1.14
 ripper # 192.168.1.15
+octopi # 192.168.1.109
 
 # hosts that use the 'pkg' package manager
 [pkg]
