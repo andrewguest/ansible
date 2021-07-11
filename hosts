@@ -2,14 +2,11 @@
 
 # hosts that use the 'apt' package manager
 [apt]
-pihole  # 192.168.1.10
-homeassistant # 192.168.1.11
-flightradar24 # 192.168.1.12
-jellyfin # 192.168.1.13
-openvpn # 192.168.1.14
-ripper # 192.168.1.15
-octopi # 192.168.1.109
+192.168.1.11    # homeassistant
+192.168.1.12    # FlightRadar24 Pi
+192.168.1.13    # Jellyfin
+192.168.1.15    # Ripper server
 
 # hosts that use the 'pkg' package manager
 [pkg]
-truenas # 192.168.1.9
+truenas.lan # 192.168.1.9

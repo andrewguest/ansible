@@ -12,7 +12,7 @@
           only_upgrade: yes
         register: apt_update_status  # create a 'state' that can be checked later
       
-      - name: Remove packages not needed anymore
+      - name: Remove unnecessary packages
         apt:
           autoremove: yes
       
