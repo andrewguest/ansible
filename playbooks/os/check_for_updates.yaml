@@ -1,0 +1,14 @@
+---
+- name: List available OS updates
+  hosts: apt
+
+  tasks:
+    - name: Check for available updates
+      apt:
+        list: updates
+        update_cache: true
+      register: stat_apt_check_output
+
+    - name: Output apt check results
+      debug:
+        msg: "{{ stat_apt_check_output.results | map(attribute='name') | list }}"
