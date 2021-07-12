@@ -1,0 +1,19 @@
+# This file should be placed in: /etc/ansible/hosts
+
+# hosts that use the 'apt' package manager
+apt:
+  hosts:
+    homeassistant:
+      ansible_host: 192.168.1.11
+    flightradar24:
+      ansible_host: 192.168.1.12
+    jellyfin:
+      ansible_host: 192.168.1.13
+    ripper:
+      ansible_host: 192.168.1.15
+
+# hosts that use the 'pkg' package manager
+pkg:
+  hosts:
+    truenas:
+      ansible_host: 192.168.1.9
