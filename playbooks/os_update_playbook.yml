@@ -15,6 +15,11 @@
       - name: Remove unnecessary packages
         apt:
           autoremove: yes
+          
+      - name: Print errors if apt failed
+        debug:
+          msg: "APT command produced errors"
+        when: apt_update_status is not defined
       
       - name: Reboot when packages were updated
         reboot:
