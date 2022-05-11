@@ -11,10 +11,6 @@ apt:
       ansible_host: 192.168.1.13
     ripper:
       ansible_host: 192.168.1.15
-    discordpi:
-      ansible_host: 192.168.1.16
-    pihole:
-      ansible_host: 192.168.1.108
 
 # hosts that use the 'pkg' package manager
 pkg:
